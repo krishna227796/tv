@@ -6,7 +6,7 @@ body {
   height: 100vh;
 }
 
-/* Transparent header */
+/* Transparent header fixed at top */
 header {
   display: flex;
   justify-content: space-between;
@@ -16,7 +16,9 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0; /* ensures it stretches across screen */
   width: 100%;
+  box-sizing: border-box; /* prevents overflow */
 }
 
 .app-name {
@@ -28,7 +30,7 @@ header {
 #power-btn {
   background: none;
   border: 2px solid #fff;
-  border-radius: 50%; /* circular button */
+  border-radius: 50%; /* circular */
   font-size: 1.5em;
   color: #fff;
   cursor: pointer;
@@ -42,7 +44,7 @@ header {
   color: #fff;
 }
 
-/* Responsive design */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .app-name {
     font-size: 1.4em;
@@ -61,4 +63,9 @@ header {
     font-size: 1em;
     padding: 6px;
   }
+}
+
+main {
+  padding-top: 100px; /* keeps content below header */
+  text-align: center;
 }
