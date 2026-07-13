@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url('background.jpg') no-repeat center center/cover;
-  color: #000;
+  background-color: #000; /* solid black background */
+  color: #fff;
   height: 100vh;
 }
 
@@ -12,7 +12,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-  background-color: rgba(0, 0, 0, 0); /* fully transparent */
+  background-color: transparent; /* fully transparent */
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@ header {
 .app-name {
   font-size: 1.8em;
   font-weight: bold;
-  color: #e50914;
+  color: #e50914; /* Netflix-style red */
 }
 
 #power-btn {
