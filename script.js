@@ -1,26 +1,9 @@
-// Exit button
-document.getElementById("power-btn").addEventListener("click", () => {
-  const confirmExit = confirm("Exit TvFlix?");
-  if (confirmExit) {
-    window.close();
-    alert("TvFlix closed.");
-  }
-});
+function playVideo(element) {
+    const container = element.parentElement;
+    const iframe = container.querySelector("iframe");
 
-const movieCards = document.querySelectorAll(".movie-card");
-const videoModal = document.getElementById("video-modal");
-const videoPlayer = document.getElementById("video-player");
-const closeVideo = document.getElementById("close-video");
+    iframe.src = iframe.dataset.src;
+    iframe.style.display = "block";
 
-movieCards.forEach(card => {
-  card.addEventListener("click", () => {
-    const videoSrc = card.getAttribute("data-video");
-    videoPlayer.src = videoSrc; // iframe embed link
-    videoModal.style.display = "flex";
-  });
-});
-
-closeVideo.addEventListener("click", () => {
-  videoPlayer.src = ""; // stop video
-  videoModal.style.display = "none";
-});
+    element.remove();
+}
