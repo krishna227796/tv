@@ -12,7 +12,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-  background-color: transparent; /* fully transparent */
+  background-color: transparent;
   position: fixed;
   top: 0;
   left: 0;
@@ -22,23 +22,43 @@ header {
 .app-name {
   font-size: 1.8em;
   font-weight: bold;
-  color: #e50914; /* Netflix-style red */
+  color: #e50914;
 }
 
 #power-btn {
   background: none;
-  border: none;
-  font-size: 1.8em;
+  border: 2px solid #fff;
+  border-radius: 50%; /* circular button */
+  font-size: 1.5em;
   color: #fff;
   cursor: pointer;
-  transition: color 0.3s;
+  padding: 10px;
+  transition: all 0.3s ease;
 }
 
 #power-btn:hover {
-  color: #e50914;
+  background-color: #e50914;
+  border-color: #e50914;
+  color: #fff;
 }
 
-main {
-  padding-top: 100px;
-  text-align: center;
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-name {
+    font-size: 1.4em;
+  }
+  #power-btn {
+    font-size: 1.2em;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-name {
+    font-size: 1.2em;
+  }
+  #power-btn {
+    font-size: 1em;
+    padding: 6px;
+  }
 }
