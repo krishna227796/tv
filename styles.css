@@ -97,7 +97,7 @@ main {
 
 #video-player {
   width: 90%;
-  max-height: 80%;
+  height: 80%;
 }
 
 #close-video {
