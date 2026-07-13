@@ -28,3 +28,12 @@ closeVideo.addEventListener("click", () => {
   videoPlayer.src = "";
   videoModal.style.display = "none";
 });
+
+// Optional: allow ESC key to close video
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && videoModal.style.display === "flex") {
+    videoPlayer.pause();
+    videoPlayer.src = "";
+    videoModal.style.display = "none";
+  }
+});
