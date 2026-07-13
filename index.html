@@ -1,44 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TvFlix</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TvFlix</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="app-name">TvFlix</div>
-    <button id="power-btn">⏻</button>
-  </header>
+    
+    <header>
+        <div class="app-name">TvFlix</div>
+        <button id="power-btn">⏻</button>
+    </header>
 
-  <main>
-    <h1>Welcome to TvFlix</h1>
-    <div class="movie-container">
-      <iframe src="https://streamtape.com/e/r2Qgd08ePBfbJz7/" width="400" height="300" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
-       <!-- Example movie cards -->
-        
-        <img src="poster1.jpg" alt="Movie 1">
-        <p>Movie 1</p>  
-      </div>
-      <div class="movie-card" data-video="movie2.mp4">
-        <img src="poster2.jpg" alt="Movie 2">
-        <p>Movie 2</p>
-      </div>
-      <div class="movie-card" data-video="movie3.mp4">
-        <img src="poster3.jpg" alt="Movie 3">
-        <p>Movie 3</p>
-      </div>
-      <!-- Add more cards as needed -->
+
+<div class="video-box1">
+    <div class="thumbnail" onclick="playVideo(this)">
+        <img src="images/movie1.jpg">
+        <div class="play-button1">▶</div>
     </div>
-  </main>
 
-  <!-- Fullscreen video modal -->
-<div id="video-modal">
-  <iframe id="video-player" src="" frameborder="0" allowfullscreen></iframe>
-  <button id="close-video">✖</button>
+    <iframe
+        data-src="https://streamtape.com/v/9OPoW3VK86ta0MD/www.1TamilMV.Durban_-_Blast_Zone_2026_Telugu_TRUE_WEB-DL_-_1080p_-_AVC_-_DD5.1_-_640Kbps__AAC_-_2.7GB_-_ESub.mkv"
+        allowfullscreen
+        allow="autoplay"
+        scrolling="no"
+        frameborder="0"
+        style="display:none;">
+        
+    </iframe>
+    
 </div>
 
-  <script src="script.js"></script>
+
+<div class="video-box2">
+
+    <div class="thumbnail" onclick="playVideo(this)">
+        <img src="images/movie2.jpg">
+        <div class="play-button2">▶</div>
+    </div>
+
+    <iframe
+        data-src="https://streamtape.com/e/r2Qgd08ePBfbJz7/"
+        allowfullscreen
+        allow="autoplay"
+        scrolling="no"
+        frameborder="0"
+        style="display:none;">
+    </iframe>
+</div>
+
+
+<div class="video-box3">
+
+    <div class="thumbnail" onclick="playVideo(this)">
+        <img src="images/movie3.jpg">
+        <div class="play-button3">▶</div>
+    </div>
+
+    <iframe
+        data-src="https://streamtape.com/e/r2Qgd08ePBfbJz7/"
+        allowfullscreen
+        allow="autoplay"
+        scrolling="no"
+        frameborder="0"
+        style="display:none;">
+    </iframe>
+</div>
+
+<div class="video-box4">
+
+    <div class="thumbnail" onclick="playVideo(this)">
+        <img src="images/movie4.jpg">
+        <div class="play-button4">▶</div>
+    </div>
+
+    <iframe
+        data-src="https://streamtape.com/e/r2Qgd08ePBfbJz7/"
+        allowfullscreen
+        allow="autoplay"
+        scrolling="no"
+        frameborder="0"
+        style="display:none;">
+    </iframe>
+</div>
+  
+
+
+    <script src="script.js"></script>
 </body>
 </html>
